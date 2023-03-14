@@ -35,6 +35,12 @@ main:after {
 	line-height: 30px;
 }
 
+.btn-watch {
+	width: 45%;
+	padding: 10px;
+	padding: 10px;
+}
+
 .buttons-carrossel {
 	display: flex;
 	justify-content: center;
@@ -98,7 +104,7 @@ main:after {
 	animation: changeImage 0.7s;
 }
 
-.carrossel .image.ativa {
+.carrossel .image.active {
 	display: block;
 }
 

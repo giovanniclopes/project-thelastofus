@@ -1,5 +1,5 @@
 /* 
-	OBJETIVO - quando clicarmos no botão temos que mostrar a imagem de fundo correspondente
+	OBJETIVO - quando clicarmos no botão temos que mostrar a image de fundo correspondente
 
     - passo 1 - dar um jeito de pegar o elemento HTML dos botões
 
@@ -9,42 +9,42 @@
 
 	- passo 4 - marcar o botão clicado como se estivesse selecionada
 
-	- passo 5 - esconder a imagem de fundo anterior
+	- passo 5 - esconder a image de fundo anterior
 
-	- passo 6 - fazer aparecer a imagem de fundo correspondente ao botão clicado
+	- passo 6 - fazer aparecer a image de fundo correspondente ao botão clicado
 */
 
 // passo 1 - dar um jeito de pegar o elemento HTML dos botões
-const botoesCarrossel = document.querySelectorAll('.botao');
-const imagens = document.querySelectorAll('.imagem');
+const buttonsCarrossel = document.querySelectorAll('.button');
+const images = document.querySelectorAll('.image');
 
 // passo 2 - dar um jeito de identificar o clique do usuário no botão
-botoesCarrossel.forEach((botao, indice) => {
-    botao.addEventListener('click', () => {    
-        desativarBotaoSelecionado();
+buttonsCarrossel.forEach((button, index) => {
+    button.addEventListener('click', () => {    
+        disableSelectButton();
 
-        selecionarBotaoCarrosel(botao);
+        selectCarroselButton(button);
 
-        esconderImagemAtiva();
+        hideActiveImage();
 
-        mostrarImagemDeFundo(indice);
+        showBackgroundImage(index);
     })
 })
 
-function mostrarImagemDeFundo(indice) {
-    imagens[indice].classList.add('ativa');
+function showBackgroundImage(index) {
+    images[index].classList.add('active');
 }
 
-function selecionarBotaoCarrosel(botao) {
-    botao.classList.add('selecionado');
+function selectCarroselButton(button) {
+    button.classList.add('selected');
 }
 
-function esconderImagemAtiva() {
-    const imagemAtiva = document.querySelector('.ativa');
-    imagemAtiva.classList.remove('ativa');
+function hideActiveImage() {
+    const imageAtiva = document.querySelector('.active');
+    imageAtiva.classList.remove('active');
 }
 
-function desativarBotaoSelecionado() {
-    const botaoSelecionado = document.querySelector('.selecionado');
-    botaoSelecionado.classList.remove('selecionado');
+function disableSelectButton() {
+    const buttonSelecionado = document.querySelector('.selected');
+    buttonSelecionado.classList.remove('selected');
 }
