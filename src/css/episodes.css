@@ -1,7 +1,7 @@
 /* episodes page */
 
 :root {
-  --gray200: #c9c9c9;
+  --gray200: #8f8f8f;
   --gray400: "#202020";
   --gray500: "#0e0e0e";
   --gray600: "#131313";
@@ -27,5 +27,8 @@ body {
 }
 
 .video-infos {
-  color: var(--gray400);
+  margin-top: 10px;
+  color: var(--gray200);
+  font-size: 0.8rem;
+  font-weight: 600;
 }
