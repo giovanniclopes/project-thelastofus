@@ -80,18 +80,19 @@ body {
 
 .episodes {
     margin-top: 2rem;
+    height: fit-content;
     background: rgb(255, 137, 137);
 }
 
 .block-ep {
   width: 2rem;
-  height: 2rem;
+  height: 1rem;
   border-radius: 10rem;
   border: 1px solid var(--brown500);
 }
 
 .block-ep1 {
-    background: url();
+    background: url(    );
 }
 
 .block-ep2 {
