@@ -1,11 +1,20 @@
 /* episodes page */
 
 :root {
+  /* -gray */
   --gray200: #8f8f8f;
   --gray400: "#202020";
   --gray500: "#0e0e0e";
   --gray600: "#131313";
+
+  /* -red */
   --red500: "#cd5c5c";
+
+  /* -green */
+  --green500: "#626554";
+
+  /* -brown */
+  --brown500: "#5e5b5c";
 }
 
 body {
@@ -16,10 +25,33 @@ body {
   width: 100%;
   height: 20px;
   background: var(--gray600);
+  padding: 1rem 1.5rem;
 }
 
 .header-ep-content {
   padding: 10px;
+}
+
+.header-blocks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.carretLeft-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  background: #8f8f8f1e;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.carretLeft-icon:hover {
+  filter: brightness(30%);
 }
 
 .video-title {
@@ -27,8 +59,69 @@ body {
 }
 
 .video-infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
   margin-top: 10px;
   color: var(--gray200);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.clock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+/* episodes */
+
+.episodes {
+    margin-top: 2rem;
+    background: rgb(255, 137, 137);
+}
+
+.block-ep {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10rem;
+  border: 1px solid var(--brown500);
+}
+
+.block-ep1 {
+    background: url();
+}
+
+.block-ep2 {
+    background: url();
+}
+
+.block-ep3 {
+    background: url();
+}
+
+.block-ep4 {
+    background: url();
+}
+
+.block-ep5 {
+    background: url();
+}
+
+.block-ep6 {
+    background: url();
+}
+
+.block-ep7 {
+    background: url();
+}
+
+.block-ep8 {
+    background: url();
+}
+
+.block-ep9 {
+    background: url();
 }
