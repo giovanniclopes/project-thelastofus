@@ -1,21 +1,17 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 main:after {
-  content: "";
+  content: '';
   min-height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 10%,
-    rgba(0, 0, 0, 0.05926120448179273) 50%,
-    rgba(0, 0, 0, 1) 90%
-  );
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
   z-index: -1;
 }
 
@@ -38,6 +34,84 @@ main:after {
   color: #ffffff;
   line-height: 30px;
 }
+
+.buttons-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons-carrossel .button {
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-color: #ffffff;
+}
+
+.buttons-carrossel .button.selected {
+  background-color: #131313;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .icon {
+  width: 30px;
+  filter: invert(1);
+  transition: 0.3s ease-in-out;
+}
+
+.sidebar .icon:hover {
+  transform: scale(1.2);
+}
+
+.carrossel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.carrossel .image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+  animation: changeImage 0.7s;
+}
+
+.carrossel .image.active {
+  display: block;
+}
+
+@keyframes changeImage {
+  from {
+    opacity: 0.85;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 button#contact-btn {
   margin-top: 1.3rem;
@@ -128,80 +202,4 @@ button#contact-btn:active {
 
 #contact-btn:hover {
   filter: brightness(75%);
-}
-
-.buttons-carrossel {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.buttons-carrossel .button {
-  background-color: #ffffff;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  border-color: #ffffff;
-}
-
-.buttons-carrossel .button.selected {
-  background-color: #131313;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.sidebar ul {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.sidebar .icon {
-  width: 30px;
-  filter: invert(1);
-  transition: 0.3s ease-in-out;
-}
-
-.sidebar .icon:hover {
-  transform: scale(1.2);
-}
-
-.carrossel {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-.carrossel .image {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: none;
-  animation: changeImage 0.7s;
-}
-
-.carrossel .image.active {
-  display: block;
-}
-
-@keyframes changeImage {
-  from {
-    opacity: 0.85;
-  }
-  to {
-    opacity: 1;
-  }
 }
