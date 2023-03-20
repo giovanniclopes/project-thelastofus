@@ -79,50 +79,160 @@ body {
 /* episodes */
 
 .episodes {
-    margin-top: 2rem;
-    height: fit-content;
-    background: rgb(255, 137, 137);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: fit-content;
+  color: #fff;
 }
 
+
+
 .block-ep {
-  width: 2rem;
-  height: 1rem;
-  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8rem;
+  height: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
   border: 1px solid var(--brown500);
+  transition: all 0.3s ease-in-out;
 }
 
 .block-ep1 {
-    background: url();
+  background: url("../imagens/episodes/ep1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep1:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep2 {
-    background: url();
+  background: url("../imagens/episodes/ep2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep2:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep3 {
-    background: url();
+  background: url("../imagens/episodes/ep3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep3:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep4 {
-    background: url();
+  background: url("../imagens/episodes/ep4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep4:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep5 {
-    background: url();
+  background: url("../imagens/episodes/ep5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep5:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep6 {
-    background: url();
+  background: url("../imagens/episodes/ep6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep6:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep7 {
-    background: url();
+  background: url("../imagens/episodes/ep7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep7:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep8 {
-    background: url();
+  background: url("../imagens/episodes/ep8.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep8:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }
 
 .block-ep9 {
-    background: url();
+  background: url("../imagens/episodes/ep9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep9:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
 }

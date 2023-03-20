@@ -1,48 +1,53 @@
 @media (max-width: 1280px) {
-	body {
-		padding: 0 40px;
-	}
+  body {
+    padding: 0 40px;
+  }
 }
 
 @media (max-width: 768px) {
-	.informations {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  .informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-	.informations .description {
-		width: 60%;
-		text-align: center;
-	}
+  .informations .description {
+    width: 60%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 425px) {
-	.informations .logo {
-		max-width: 300px;
-	}
+  body {
+    padding: 40px;
+  }
+  .informations .logo {
+    max-width: 300px;
+  }
 
-	.informations .description {
-		width: 100%;
-	}
+  .informations .description {
+    width: 100%;
+  }
 
-	.sidebar {
-		position: static;
-		min-height: auto;
-		width: 100%;
-		margin-top: 50px;
-	}
+  .sidebar {
+    position: static;
+    min-height: auto;
+    width: 100%;
+    margin-top: 50px;
+  }
 
-	.sidebar ul {
-		flex-direction: row;
-	}
+  .sidebar ul {
+    flex-direction: row;
+  }
 
-	.content {
-		min-height: 70vh;
-		gap: 50px;
-	}
+  .content {
+    min-height: 70vh;
+    gap: 50px;
+  }
 
-	body {
-		padding: 40px;
-	}
+  /* episodes page */
+
+  .episodes {
+	d
+  }
 }
