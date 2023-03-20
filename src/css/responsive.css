@@ -46,8 +46,22 @@
   }
 
   /* episodes page */
+}
 
+@media (max-width: 625px) {
   .episodes {
-	d
+    flex-direction: column;
   }
+  .block-ep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  height: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border: 1px solid var(--brown500);
+  transition: all 0.3s ease-in-out;
+}
 }

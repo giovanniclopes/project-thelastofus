@@ -87,8 +87,6 @@ body {
   color: #fff;
 }
 
-
-
 .block-ep {
   display: flex;
   align-items: center;
@@ -235,4 +233,12 @@ body {
   height: 12rem;
   cursor: pointer;
   filter: brightness(100%);
+}
+
+.video-ep {
+  margin-top: 3rem;
+}
+
+.video-section {
+
 }
