@@ -49,8 +49,16 @@
 }
 
 @media (max-width: 625px) {
+  .header-ep-content {
+    padding: 1px;
+  }
+  .video-title {
+    font-size: 0.5rem;
+  }
   .episodes {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .block-ep {
   display: flex;
@@ -63,5 +71,9 @@
   border-radius: 5px;
   border: 1px solid var(--brown500);
   transition: all 0.3s ease-in-out;
+}
+.video-ep {
+  display: flex;
+  flex-direction: column;
 }
 }
