@@ -11,3 +11,24 @@ ul {
 a {
 	text-decoration: none;
 }
+
+/* scrollbar */
+
+* {
+	scrollbar-width: auto;
+	scrollbar-color: #252C25 #3a3a3b;
+}
+
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #131313;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #4a514f;
+	border-radius: 7px;
+	border: 0px solid #ffffff;
+}
