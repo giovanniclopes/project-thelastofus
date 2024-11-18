@@ -58,7 +58,7 @@ a {
 
 body {
   font-family: "Inter", sans-serif;
-  background: url("../imagens/bg-video.png") fixed no-repeat;
+  background: url("../images/bg-video.png") fixed no-repeat;
   background-size: cover;
   color: #fff;
 }
@@ -147,7 +147,7 @@ body {
 }
 
 .block-ep1 {
-  background: url("../imagens/episodes/ep1.jpg");
+  background: url("../images/episodes/ep1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -162,7 +162,7 @@ body {
 }
 
 .block-ep2 {
-  background: url("../imagens/episodes/ep2.jpg");
+  background: url("../images/episodes/ep2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -177,7 +177,7 @@ body {
 }
 
 .block-ep3 {
-  background: url("../imagens/episodes/ep3.jpg");
+  background: url("../images/episodes/ep3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -192,7 +192,7 @@ body {
 }
 
 .block-ep4 {
-  background: url("../imagens/episodes/ep4.jpg");
+  background: url("../images/episodes/ep4.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -207,7 +207,7 @@ body {
 }
 
 .block-ep5 {
-  background: url("../imagens/episodes/ep5.jpg");
+  background: url("../images/episodes/ep5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -222,7 +222,7 @@ body {
 }
 
 .block-ep6 {
-  background: url("../imagens/episodes/ep6.jpg");
+  background: url("../images/episodes/ep6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -237,7 +237,7 @@ body {
 }
 
 .block-ep7 {
-  background: url("../imagens/episodes/ep7.jpg");
+  background: url("../images/episodes/ep7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -252,7 +252,7 @@ body {
 }
 
 .block-ep8 {
-  background: url("../imagens/episodes/ep8.jpg");
+  background: url("../images/episodes/ep8.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -267,7 +267,7 @@ body {
 }
 
 .block-ep9 {
-  background: url("../imagens/episodes/ep9.jpg");
+  background: url("../images/episodes/ep9.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

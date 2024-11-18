@@ -5,16 +5,16 @@ export function App() {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
   const images = [
-    { src: "./src/imagens/tlou-bg.jpg", alt: "Ellie e Joel abraçados" },
-    { src: "./src/imagens/tlou-2.jpg", alt: "Personagens The Last of Us" },
-    { src: "./src/imagens/tlou-3.jpg", alt: "Joel olhando pela janela" },
-    { src: "./src/imagens/tlou-4.jpg", alt: "Ellie e Tess se olhando" },
+    { src: "../../src/images/tlou-bg.jpg", alt: "Ellie e Joel abraçados" },
+    { src: "../../src/images/tlou-2.jpg", alt: "Personagens The Last of Us" },
+    { src: "../../src/images/tlou-3.jpg", alt: "Joel olhando pela janela" },
+    { src: "../../src/images/tlou-4.jpg", alt: "Ellie e Tess se olhando" },
     {
-      src: "./src/imagens/tlou-5.jpg",
+      src: "../../src/images/tlou-5.jpg",
       alt: "Ellie e Joel caminhando em uma cidade destruída",
     },
     {
-      src: "./src/imagens/tlou-6.jpg",
+      src: "../../src/images/tlou-6.jpg",
       alt: "Joel segurando uma lanterna ligada na mão direita",
     },
   ];
@@ -40,7 +40,7 @@ export function App() {
         <div className="informations">
           <img
             className="logo"
-            src="../../src/imagens/logo.png"
+            src="../../src/images/logo.png"
             alt="logo The Last of Us"
           />
           <p className="description">
@@ -49,7 +49,7 @@ export function App() {
             narra um futuro pandêmico que foi devastador para humanidade,
             deixando os seres humanos à beira da extinção.
           </p>
-          <a href="../../src/pages/episodes.html">
+          <a href="./src/pages/episodes.html">
             <button id="contact-btn">
               {/* SVG button content remains the same */}
               <span>Assistir</span>
@@ -79,7 +79,7 @@ export function App() {
               rel="noopener noreferrer"
             >
               <img
-                src="./src/imagens/github.svg"
+                src="../../src/images/github.svg"
                 alt="ícone GitHub"
                 className="icon"
               />
@@ -92,13 +92,13 @@ export function App() {
               rel="noopener noreferrer"
             >
               <img
-                src="../../src/imagens/linkedin-in.svg"
+                src="../../src/images/linkedin.svg"
                 alt="ícone LinkedIn"
                 className="icon"
               />
             </a>
           </li>
-          <audio src="../../src/audio/bg-audio.mp3" autoPlay loop />
+          <audio src="/audio/bg-audio.mp3" autoPlay loop />
         </ul>
       </aside>
     </main>
