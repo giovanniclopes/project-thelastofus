@@ -1,3 +1,615 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* scrollbar */
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #252c25 #3a3a3b;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #131313;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #4a514f;
+  border-radius: 7px;
+  border: 0px solid #ffffff;
+}
+
+/* episodes page */
+
+:root {
+  /* -gray */
+  --gray200: #8f8f8f;
+  --gray400: "#202020";
+  --gray500: "#0e0e0e";
+  --gray600: "#131313";
+
+  /* -red */
+  --red500: "#cd5c5c";
+
+  /* -green */
+  --green500: "#626554";
+
+  /* -brown */
+  --brown500: "#5e5b5c";
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: url("../imagens/bg-video.png") fixed no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.header-ep {
+  width: 100%;
+  height: 20px;
+  background: var(--gray600);
+  padding: 1.5rem 1.5rem;
+}
+
+.header-ep-content {
+  padding: 10px;
+}
+
+.header-blocks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.carretLeft-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  background: #8f8f8f31;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.carretLeft-icon:hover {
+  filter: brightness(280%);
+}
+
+.video-title {
+  font-size: 0.6rem;
+}
+
+.video-infos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 10px;
+  color: var(--gray200);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.clock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+/* episodes */
+
+.episodes {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 2rem;
+  height: fit-content;
+  color: #fff;
+}
+
+.episodes a {
+  all: unset;
+}
+
+.block-ep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.8rem;
+  height: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  border: 1px solid var(--brown500);
+  transition: all 0.3s ease-in-out;
+}
+
+.block-ep1 {
+  background: url("../imagens/episodes/ep1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep1:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep2 {
+  background: url("../imagens/episodes/ep2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep2:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep3 {
+  background: url("../imagens/episodes/ep3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep3:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep4 {
+  background: url("../imagens/episodes/ep4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep4:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep5 {
+  background: url("../imagens/episodes/ep5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep5:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep6 {
+  background: url("../imagens/episodes/ep6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep6:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep7 {
+  background: url("../imagens/episodes/ep7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep7:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep8 {
+  background: url("../imagens/episodes/ep8.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep8:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.block-ep9 {
+  background: url("../imagens/episodes/ep9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+.block-ep9:hover {
+  width: 20rem;
+  height: 12rem;
+  cursor: pointer;
+  filter: brightness(100%);
+}
+
+.video-ep {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.video-section {
+  width: 100%;
+  height: 100%;
+}
+
+.video iframe {
+  width: 100%;
+  height: 500px;
+  max-height: 100%;
+}
+
+.description-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description-section h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.description-section p {
+  color: #e4e4e4;
+  width: 90%;
+}
+
+@media (max-width: 1280px) {
+  body {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .informations .description {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 625px) {
+  body {
+    padding: 40px;
+  }
+
+  .informations .logo {
+    max-width: 300px;
+  }
+
+  .informations .description {
+    width: 100%;
+  }
+
+  .sidebar {
+    position: static;
+    min-height: auto;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+  }
+
+  .content {
+    min-height: 70vh;
+    gap: 50px;
+  }
+
+  button#contact-btn {
+    margin: 2rem;
+  }
+
+  /* episodes page */
+}
+
+@media (max-width: 625px) {
+  .header-ep-content {
+    padding: 1px;
+  }
+
+  .video-title {
+    font-size: 0.5rem;
+  }
+
+  .episodes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .block-ep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    height: 8rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    border: 1px solid var(--brown500);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .video-ep {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+main:after {
+  content: "";
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.05926120448179273) 50%,
+    rgba(0, 0, 0, 1) 90%
+  );
+  z-index: -1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-evenly;
+}
+
+.informations .logo {
+  max-width: 350px;
+  filter: invert(1);
+  margin-bottom: 80px;
+}
+
+.informations .description {
+  width: 49%;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 30px;
+}
+
+.buttons-carrossel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons-carrossel .button {
+  background-color: #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-color: #ffffff;
+}
+
+.buttons-carrossel .button.selected {
+  background-color: #131313;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar .icon {
+  width: 30px;
+  filter: invert(1);
+  transition: 0.3s ease-in-out;
+}
+
+.sidebar .icon:hover {
+  transform: scale(1.2);
+}
+
+.carrossel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.carrossel .image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: none;
+  animation: changeImage 0.7s;
+}
+
+.carrossel .image.active {
+  display: block;
+}
+
+@keyframes changeImage {
+  from {
+    opacity: 0.85;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+button#contact-btn {
+  margin-top: 1.3rem;
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+  padding: 1em 2.5em 1em 2.5em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+button#contact-btn span {
+  display: block;
+  margin-left: 0.3em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+button#contact-btn svg {
+  display: block;
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+button#contact-btn:hover .svg-wrapper {
+  -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button#contact-btn:hover svg {
+  -webkit-transform: translateX(4em) rotate(45deg) scale(1.1);
+  -ms-transform: translateX(4em) rotate(45deg) scale(1.1);
+  transform: translateX(4em) rotate(45deg) scale(1.1);
+}
+
+button#contact-btn:hover span {
+  -webkit-transform: translateX(10em);
+  -ms-transform: translateX(10em);
+  transform: translateX(10em);
+}
+
+button#contact-btn:active {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+@-webkit-keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+    transform: translateY(0.1em);
+  }
+
+  to {
+    -webkit-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    -webkit-transform: translateY(0.1em);
+    transform: translateY(0.1em);
+  }
+
+  to {
+    -webkit-transform: translateY(-0.1em);
+    transform: translateY(-0.1em);
+  }
+}
+
+#contact-btn:hover {
+  filter: brightness(75%);
+}
