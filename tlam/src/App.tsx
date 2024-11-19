@@ -6,6 +6,7 @@ import BackgroundMusic from "../src/assets/audio/bg-audio.mp3";
 import SporesAnimation from "../src/components/SporesAnimation";
 import RotatingQuote from "../src/components/RotatingQuote";
 import FloatingQuotes from "../src/components/FloatingQuotes";
+import CursorLantern from "./components/CursorLantern";
 
 const images = [
   new URL("./assets/tlou-1.jpg", import.meta.url).href,
@@ -109,6 +110,7 @@ const App = () => {
 
   return (
     <div className="relative">
+      <CursorLantern />
       <SporesAnimation />
       <FloatingQuotes />
 

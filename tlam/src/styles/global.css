@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  @apply font-robotoFont;
+  @apply font-robotoFont overflow-hidden cursor-none;
+  cursor: url("../assets/lantern.png"), auto;
 }
 h1,
 h2,
@@ -26,4 +27,30 @@ h6 {
   50% {
     opacity: 0;
   }
+}
+
+.cursor-lanterna {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.575) 00%,
+    rgba(255, 255, 255, 0.575) 10%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  pointer-events: none;
+  mix-blend-mode: screen; /* Mistura para criar um efeito de iluminação */
+  z-index: 9999;
+  transform: translate(-50%, -20%);
+  transition: background 0.2s ease;
+}
+
+.cursor-lanterna:hover {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 40%,
+    rgba(255, 255, 255, 0.2) 70%
+  );
 }
