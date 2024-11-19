@@ -3,6 +3,9 @@ import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
 import TlouLogo from "../src/assets/logo.png";
 import FireflyLogo from "../src/assets/fireflies-logo.svg";
 import BackgroundMusic from "../src/assets/audio/bg-audio.mp3";
+import SporesAnimation from "../src/components/SporesAnimation";
+import RotatingQuote from "../src/components/RotatingQuote";
+import FloatingQuotes from "../src/components/FloatingQuotes";
 
 const images = [
   new URL("./assets/tlou-1.jpg", import.meta.url).href,
@@ -106,6 +109,9 @@ const App = () => {
 
   return (
     <div className="relative">
+      <SporesAnimation />
+      <FloatingQuotes />
+
       <div className="fixed inset-0 pointer-events-none opacity-40 bg-black"></div>
       <div
         className="w-screen h-screen bg-cover bg-center transition-all duration-1000 ease-in-out relative"
@@ -121,9 +127,7 @@ const App = () => {
             src={TlouLogo}
             alt="The Last of Us Logo"
           />
-          <p className="text-white mt-2 italic text-sm md:text-base">
-            "When you're lost in the darkness, look for the light"
-          </p>
+          <RotatingQuote />
           <p className="text-white mt-4 md:mt-10 max-w-full md:max-w-2xl text-sm md:text-xl text-left leading-relaxed mbl:w-5/6 mbl:mt-7">
             The Last of Us é uma série distópica da HBO baseada na franquia de
             jogos de videogame de mesmo nome criada por Neil Druckmann. O drama
