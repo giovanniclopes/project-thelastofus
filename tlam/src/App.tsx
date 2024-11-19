@@ -1,108 +1,152 @@
-import { useState } from "react";
-import "./styles/global.css";
+import { useState, useEffect, useRef } from "react";
+import { FaVolumeUp, FaVolumeMute } from "react-icons/fa";
+import TlouLogo from "../src/assets/logo.png";
+import FireflyLogo from "../src/assets/fireflies-logo.svg";
+import BackgroundMusic from "../src/assets/audio/bg-audio.mp3";
 
-export function App() {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+const images = [
+  new URL("./assets/tlou-1.jpg", import.meta.url).href,
+  new URL("./assets/tlou-2.jpg", import.meta.url).href,
+  new URL("./assets/tlou-3.jpg", import.meta.url).href,
+  new URL("./assets/tlou-4.jpg", import.meta.url).href,
+  new URL("./assets/tlou-5.jpg", import.meta.url).href,
+  new URL("./assets/tlou-6.jpg", import.meta.url).href,
+];
 
-  const images = [
-    { src: "../../src/images/tlou-bg.jpg", alt: "Ellie e Joel abraçados" },
-    { src: "../../src/images/tlou-2.jpg", alt: "Personagens The Last of Us" },
-    { src: "../../src/images/tlou-3.jpg", alt: "Joel olhando pela janela" },
-    { src: "../../src/images/tlou-4.jpg", alt: "Ellie e Tess se olhando" },
-    {
-      src: "../../src/images/tlou-5.jpg",
-      alt: "Ellie e Joel caminhando em uma cidade destruída",
-    },
-    {
-      src: "../../src/images/tlou-6.jpg",
-      alt: "Joel segurando uma lanterna ligada na mão direita",
-    },
-  ];
+// Componente para o áudio
+const AudioController = ({
+  isMuted,
+  toggleMute,
+}: {
+  isMuted: boolean;
+  toggleMute: () => void;
+}) => (
+  <button
+    onClick={toggleMute}
+    className="absolute top-4 right-4 text-white text-2xl"
+    aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+  >
+    {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
+  </button>
+);
 
-  const handleButtonClick = (index: number) => {
-    setActiveImageIndex(index);
+// Componente para os indicadores de imagens
+const ImageIndicators = ({
+  images,
+  currentImageIndex,
+  setCurrentImageIndex,
+}: {
+  images: string[];
+  currentImageIndex: number;
+  setCurrentImageIndex: (index: number) => void;
+}) => (
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3  p-2 rounded-full">
+    {images.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentImageIndex(index)}
+        className={`w-2.5 h-2.5 border rounded-full ${
+          currentImageIndex === index
+            ? "p-2 bg-black border-white"
+            : "p-2 bg-white border-black hover:bg-gray-300"
+        } transition-all duration-300 transform hover:scale-110 hover:shadow-glow`}
+        aria-label={`Go to image ${index + 1}`}
+      />
+    ))}
+  </div>
+);
+
+const App = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMuted, setIsMuted] = useState(
+    () => localStorage.getItem("isMuted") === "true"
+  );
+  const audioRef = useRef<HTMLAudioElement>(new Audio(BackgroundMusic));
+
+  // Precarrega imagens
+  useEffect(() => {
+    images.forEach((img) => {
+      const imgPreload = new Image();
+      imgPreload.src = img;
+    });
+  }, []);
+
+  // Troca automática de imagens
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % images.length);
+    }, 7500);
+    return () => clearTimeout(timeout);
+  }, [currentImageIndex]);
+
+  // Configura e gerencia o áudio
+  useEffect(() => {
+    const audio = audioRef.current;
+    audio.loop = true;
+    audio.muted = isMuted;
+    if (!isMuted) {
+      audio
+        .play()
+        .catch((error) => console.error("Erro ao reproduzir áudio:", error));
+    }
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [isMuted]);
+
+  const toggleMute = () => {
+    setIsMuted((prevMuted) => {
+      const newMutedState = !prevMuted;
+      audioRef.current.muted = newMutedState;
+      localStorage.setItem("isMuted", String(newMutedState));
+      return newMutedState;
+    });
   };
 
   return (
-    <main>
-      <div className="carrossel">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            className={`image ${index === activeImageIndex ? "active" : ""}`}
-            src={image.src}
-            alt={image.alt}
-          />
-        ))}
-      </div>
+    <div className="relative">
+      <div className="fixed inset-0 pointer-events-none opacity-40 bg-black"></div>
+      <div
+        className="w-screen h-screen bg-cover bg-center transition-all duration-1000 ease-in-out relative"
+        style={{
+          backgroundImage: `url(${images[currentImageIndex]})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/90 pointer-events-none" />
 
-      <div className="content">
-        <div className="informations">
+        <div className="flex flex-col pt-16 md:pt-32 pl-4 md:pl-16 mbl:pt-36">
           <img
-            className="logo"
-            src="../../src/images/logo.png"
-            alt="logo The Last of Us"
+            className="invert w-3/6 md:w-2/6"
+            src={TlouLogo}
+            alt="The Last of Us Logo"
           />
-          <p className="description">
+          <p className="text-white mt-2 italic text-sm md:text-base">
+            "When you're lost in the darkness, look for the light"
+          </p>
+          <p className="text-white mt-4 md:mt-10 max-w-full md:max-w-2xl text-sm md:text-xl text-left leading-relaxed mbl:w-5/6 mbl:mt-7">
             The Last of Us é uma série distópica da HBO baseada na franquia de
             jogos de videogame de mesmo nome criada por Neil Druckmann. O drama
-            narra um futuro pandêmico que foi devastador para humanidade,
-            deixando os seres humanos à beira da extinção.
+            narra um futuro pandêmico que foi devastador para humanidade.
           </p>
-          <a href="./src/pages/episodes.html">
-            <button id="contact-btn">
-              {/* SVG button content remains the same */}
-              <span>Assistir</span>
-            </button>
-          </a>
-        </div>
-
-        <div className="buttons-carrossel">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`button ${
-                index === activeImageIndex ? "selected" : ""
-              }`}
-              onClick={() => handleButtonClick(index)}
+          <button className="w-max mt-5 text-sm md:text-lg font-bold bg-white text-black py-2 md:py-4 px-5 md:px-10 cursor-pointer flex items-center justify-center gap-2 border-none rounded-lg overflow-hidden transition-all duration-200 hover:bg-slate-200">
+            <img
+              className="size-6 md:size-10"
+              src={FireflyLogo}
+              alt="Firefly Logo"
             />
-          ))}
+            Assistir
+          </button>
         </div>
       </div>
-
-      <aside className="sidebar">
-        <ul>
-          <li>
-            <a
-              href="https://github.com/giovanniclopes"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="../../src/images/github.svg"
-                alt="ícone GitHub"
-                className="icon"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/giovanni-lopes21"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="../../src/images/linkedin.svg"
-                alt="ícone LinkedIn"
-                className="icon"
-              />
-            </a>
-          </li>
-          <audio src="/audio/bg-audio.mp3" autoPlay loop />
-        </ul>
-      </aside>
-    </main>
+      <ImageIndicators
+        images={images}
+        currentImageIndex={currentImageIndex}
+        setCurrentImageIndex={setCurrentImageIndex}
+      />
+      <AudioController isMuted={isMuted} toggleMute={toggleMute} />
+    </div>
   );
-}
+};
 
 export default App;
