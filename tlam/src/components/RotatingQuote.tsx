@@ -7,6 +7,7 @@ const RotatingQuote = () => {
     "Save who you can save.",
     "You keep finding something to fight for.",
     "After all we've been through, everything I've done—it can't be for nothing.",
+    "No matter what, you keep finding something to fight for.",
   ];
 
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
