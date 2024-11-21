@@ -125,7 +125,7 @@ const App = () => {
 
         <div className="flex flex-col pt-16 md:pt-32 pl-4 md:pl-16 mbl:pt-36">
           <img
-            className="invert w-3/6 md:w-2/6"
+            className="invert w-3/6 md:w-2/6 mbl:w-64"
             src={TlouLogo}
             alt="The Last of Us Logo"
           />

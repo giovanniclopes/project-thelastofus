@@ -42,7 +42,7 @@ const RotatingQuote = () => {
   }, [displayedText, isDeleting, currentQuoteIndex]);
 
   return (
-    <p className="text-white mt-2 italic text-sm md:text-base">
+    <p className="text-white mt-2 italic text-sm md:text-base mbl:w-5/6">
       {displayedText}
       <span className="blinking-cursor">|</span>
     </p>

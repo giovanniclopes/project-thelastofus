@@ -2,14 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <title>Vite + React + TS</title>
+    <title>TLOU - Look for the light.</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const titles = [
+          "TLOU - When you're lost in the darkness, look for the light.",
+          "TLOU - Endure and survive.",
+          "TLOU - Save who you can save.",
+          "TLOU - You keep finding something to fight for.",
+          "TLOU - After all we've been through, everything I've done—it can't be for nothing.",
+        ];
+        let currentIndex = 0;
+        setInterval(() => {
+          document.title = titles[currentIndex];
+          currentIndex = (currentIndex + 1) % titles.length;
+        }, 5000); // Altera o título a cada 3 segundos
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>
