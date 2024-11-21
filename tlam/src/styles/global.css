@@ -47,6 +47,12 @@ h6 {
   transition: background 0.2s ease;
 }
 
+@media(max-width: 768px) {
+  .cursor-lanterna {
+    display: none;
+  }
+}
+
 .cursor-lanterna:hover {
   background: radial-gradient(
     circle,

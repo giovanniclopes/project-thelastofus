@@ -7,6 +7,7 @@ const RotatingQuote = () => {
     "Save who you can save.",
     "You keep finding something to fight for.",
     "After all we've been through, everything I've done—it can't be for nothing.",
+    "No matter what, you keep finding something to fight for.",
   ];
 
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -42,7 +43,7 @@ const RotatingQuote = () => {
   }, [displayedText, isDeleting, currentQuoteIndex]);
 
   return (
-    <p className="text-white mt-2 italic text-sm md:text-base">
+    <p className="text-white mt-2 italic text-sm md:text-base mbl:w-5/6">
       {displayedText}
       <span className="blinking-cursor">|</span>
     </p>
